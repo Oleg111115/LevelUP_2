@@ -1,4 +1,5 @@
 def get_primes(num):
+    primes = []
     """
     Функция определяет простые числа до заданного числа
     """
@@ -7,10 +8,12 @@ def get_primes(num):
             if i % j == 0:
                 break
         else:
-            print(i)
+            primes.append(i)
+    return primes
 
 num = int(input("Введите число: "))
-get_primes(num)
+primes = get_primes(num)
+print(primes)
 
 # Эта программа определяет простые числа до заданного числа.
 # Сначала мы объявляем функцию `get_primes()`, которая принимает один аргумент `num`.
