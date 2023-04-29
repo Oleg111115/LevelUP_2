@@ -1,16 +1,17 @@
-def get_primes(num):
+def prime_numbers(num):
     """
     Функция определяет простые числа до заданного числа
     """
+    prime_numbers = []
     for i in range(2, num + 1):
         for j in range(2, i):
             if i % j == 0:
                 break
         else:
-            print(i)
-
-num = int(input("Введите число: "))
-get_primes(num)
+            prime_numbers.append(i)
+    return prime_numbers
+# num = int(input("Введите число: "))
+# get_primes(num)
 
 # Эта программа определяет простые числа до заданного числа.
 # Сначала мы объявляем функцию `get_primes()`, которая принимает один аргумент `num`.
@@ -19,6 +20,6 @@ get_primes(num)
 # делится ли `i` на любое число `j`, и если да, то останавливаем проверку.
 # Если никакое число не может разделить `i`, мы выводим его на экран.
 
-# assert prime_numbers(10) == [2, 3, 5, 7]
-# assert prime_numbers(20) == [2, 3, 5, 7, 11, 13, 17, 19]
-# assert prime_numbers(5) == [2, 3, 5]
+assert prime_numbers(10) == [2, 3, 5, 7]
+assert prime_numbers(20) == [2, 3, 5, 7, 11, 13, 17, 19]
+assert prime_numbers(5) == [2, 3, 5]

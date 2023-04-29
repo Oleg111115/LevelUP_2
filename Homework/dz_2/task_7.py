@@ -9,6 +9,6 @@ def multiply_x_by_y():
     return x
 
 result = multiply_x_by_y()
-print(result)
+print(x)
 
 # assert multiply_x_by_y() == 50
