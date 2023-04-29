@@ -13,6 +13,27 @@ else:
 print("Результат умножения: ", result)
 
 
+# Ожила написания функции для прохождения тестов
+
+'''
+def multiply(a, b):
+    result = 0
+
+    if a > 0:
+        for i in range(a):
+            result += b
+    else:
+        for i in range(abs(a)):
+            result -= b
+
+    return result
+
+assert multiply(2, 3) == 6
+assert multiply(10, 5) == 50
+assert multiply(7, -3) == -21
+
+'''
+
 
 # C помощью цикла for суммируем число b a раз,
 # если а положительное,
@@ -22,3 +43,4 @@ print("Результат умножения: ", result)
 # assert multiply(2, 3) == 6
 # assert multiply(10, 5) == 50
 # assert multiply(7, -3) == -21
+
