@@ -5,25 +5,27 @@
 # являются ли они пифагоровой тройкой:
 
 
-a = int(input("Введите первое число: "))
-b = int(input("Введите второе число: "))
-c = int(input("Введите третье число: "))
+# a = int(input("Введите первое число: "))
+# b = int(input("Введите второе число: "))
+# c = int(input("Введите третье число: "))
 
-if a > b and a > c:
-    if a ** 2 == b ** 2 + c ** 2:
-        print("Это пифагорова тройка")
+def is_pythagorean_triple(a, b, c):
+    if a > b and a > c:
+        if a ** 2 == b ** 2 + c ** 2:
+            return True
+        else:
+            return False
+    elif b > a and b > c:
+        if b ** 2 == a ** 2 + c ** 2:
+            return True
+        else:
+            return False
     else:
-        print("Это не пифагорова тройка")
-elif b > a and b > c:
-    if b ** 2 == a ** 2 + c ** 2:
-        print("Это пифагорова тройка")
-    else:
-        print("Это не пифагорова тройка")
-else:
-    if c ** 2 == a ** 2 + b ** 2:
-        print("Это пифагорова тройка")
-    else:
-        print("Это не пифагорова тройка")
+        if c ** 2 == a ** 2 + b ** 2:
+            return True
+        else:
+            return False
+
 
 # В данной программе мы сначала импортируем три числа,
 # а затем проверяем, какое из них самое большое, используя условный оператор if.
@@ -32,6 +34,6 @@ else:
 # Если теорема Пифагора соблюдается - выдаём "Это пифагорова тройка",
 # иначе "Это не пифагорова тройка".
 
-# assert is_pythagorean_triple(3, 4, 5) == True
-# assert is_pythagorean_triple(5, 12, 13) == True
-# assert is_pythagorean_triple(7, 8, 9) == False
+assert is_pythagorean_triple(3, 4, 5) == True
+assert is_pythagorean_triple(5, 12, 13) == True
+assert is_pythagorean_triple(7, 8, 9) == False
